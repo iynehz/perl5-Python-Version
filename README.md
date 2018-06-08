@@ -6,7 +6,7 @@ Python::Version - Python PEP440 compatible version string parser in Perl
 
 # VERSION
 
-version 0.0000\_01
+version 0.0000\_02
 
 # SYNOPSIS
 
