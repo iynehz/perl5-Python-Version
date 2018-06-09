@@ -6,7 +6,7 @@ Python::Version - Python PEP440 compatible version string parser in Perl
 
 # VERSION
 
-version 0.0000\_02
+version 0.0001
 
 # SYNOPSIS
 
@@ -41,17 +41,29 @@ compatible version string.
 Class method. It takes a PEP440-compatible string and returns a Python::Version
 object.
 
+```perl
+my $v = Python::Version->parse($version_str);
+```
+
 ## base\_version()
+
+Returns the normalized base part of the version.
 
 ## is\_prerelease()
 
+Returns a boolean value for if the version is a pre-release.
+
 ## is\_postrelease()
+
+Returns a boolean value for if the version is a post-release.
 
 ## is\_devrelease()
 
+Returns a boolean value for if the version is a dev-release.
+
 ## local()
 
-Returns local version label.
+Returns the normalized local version label.
 
 ## normal()
 
@@ -63,7 +75,7 @@ Returns the original version string which was used to create the object.
 
 ## public()
 
-Returns the public version.
+Returns the normalized public version.
 
 # SEE ALSO
 

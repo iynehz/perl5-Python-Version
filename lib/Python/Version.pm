@@ -16,6 +16,7 @@ use overload (
     fallback => 1,
 );
 
+# obtained from https://www.python.org/dev/peps/pep-0440
 use constant RE_python_version => qr/^
     v?
     (?:
@@ -51,6 +52,8 @@ $/x;
 
 Class method. It takes a PEP440-compatible string and returns a Python::Version
 object.
+
+    my $v = Python::Version->parse($version_str);
 
 =cut
 
@@ -107,6 +110,8 @@ sub _normalize_prerelease_label {
 
 =method base_version()
 
+Returns the normalized base part of the version.
+
 =cut
 
 sub base_version {
@@ -116,9 +121,15 @@ sub base_version {
 
 =method is_prerelease()
 
+Returns a boolean value for if the version is a pre-release.
+
 =method is_postrelease()
 
+Returns a boolean value for if the version is a post-release.
+
 =method is_devrelease()
+
+Returns a boolean value for if the version is a dev-release.
 
 =cut
 
@@ -139,7 +150,7 @@ sub is_devrelease {
 
 =method local()
 
-Returns local version label.
+Returns the normalized local version label.
 
 =cut
 
@@ -182,7 +193,7 @@ sub original {
 
 =method public()
 
-Returns the public version.
+Returns the normalized public version.
 
 =cut
 
