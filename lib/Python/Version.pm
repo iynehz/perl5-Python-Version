@@ -291,13 +291,13 @@ __END__
 
     # Comparing versions
      
-    if ( version->parse($vstr1) == version->parse($vstr2) ) {
+    if ( Python::Version->parse($vstr1) == Python::Version->parse($vstr2) ) {
       # do stuff
     }
      
     # Sorting versions
      
-    my @ordered = sort { version->parse($a) <=> version->parse($b) } @list;
+    my @ordered = sort { Python::Version->parse($a) <=> Python::Version->parse($b) } @list;
 
 =head1 DESCRIPTION
 
