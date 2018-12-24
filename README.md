@@ -6,7 +6,7 @@ Python::Version - Python PEP440 compatible version string parser in Perl
 
 # VERSION
 
-version 0.0001
+version 0.0002
 
 # SYNOPSIS
 
@@ -20,13 +20,13 @@ print($v->original);
 
 # Comparing versions
  
-if ( version->parse($vstr1) == version->parse($vstr2) ) {
+if ( Python::Version->parse($vstr1) == Python::Version->parse($vstr2) ) {
   # do stuff
 }
  
 # Sorting versions
  
-my @ordered = sort { version->parse($a) <=> version->parse($b) } @list;
+my @ordered = sort { Python::Version->parse($a) <=> Python::Version->parse($b) } @list;
 ```
 
 # DESCRIPTION
@@ -84,6 +84,10 @@ PEP 440 [https://www.python.org/dev/peps/pep-0440/](https://www.python.org/dev/p
 # AUTHOR
 
 Stephan Loyd <sloyd@cpan.org>
+
+# CONTRIBUTOR
+
+perlancar <perlancar@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
