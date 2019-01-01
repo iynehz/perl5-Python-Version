@@ -31,7 +31,7 @@ my @ordered = sort { Python::Version->parse($a) <=> Python::Version->parse($b) }
 
 # DESCRIPTION
 
-This module provides a parser as well as comparion method for Python PEP440
+This module provides a parser as well as comparison method for Python PEP440
 compatible version string.
 
 # METHODS
