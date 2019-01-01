@@ -1,5 +1,8 @@
 Revision history
 
+0.0002_01   TBD
+    - Fix a typo. (Thanks Mohammad S Anwar <manwar@cpan.org>.)
+
 0.0002      2018-12-25
     - Fix pod SYNOPSIS. (Thanks perlancar <perlancar@gmail.com>.)
 
