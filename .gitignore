@@ -37,3 +37,8 @@ inc/
 # Vim
 .*.swp
 *~
+
+# dzil build tarball and dir
+Python-Version-*.tar.gz
+Python-Version-*/
+
